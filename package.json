@@ -1,0 +1,25 @@
+{
+  "author": "Nakul Mohan <nakul.mohan4491@gmail.com>",
+  "name": "make-me-a-join",
+  "version": "1.0.0",
+  "description": "join queries builder",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:netnacool/make-me-a-join.git"
+  },
+  "main": "lib/",
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "lint": "jshint lib test"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "sql": "^0.71.0",
+    "clone" : "^2.1.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
+  },
+  "license": "MIT"
+}
