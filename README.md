@@ -27,12 +27,14 @@ var order = {
     columns : [ 'id', 'user_id', 'product_id', 'created_at' ]
   }
 
+```
 
-//The joins field in options defines the join structure. If you traverse this field
-//depth wise, then each right field adds a new link to the join. This link can be
-//to a table or to another join. This ways any number of joins can be added.
-//Only the tables and joins fields are compulsory, rest all are optional
+The **joins** field in options defines the join operations. If you traverse this field
+depth wise, then each **right** field adds a new link to the join. This link can be
+to a table or to another join. This ways any number of joins can be added.
+Only the **tables** and **joins** fields are compulsory, rest all are optional
 
+```js
 //Joining two tables with select, where and other clauses.
 var joinOpts = {
     tables: {
@@ -76,9 +78,7 @@ var joinOpts = {
   };
 
 var query_text = joiner.join(joinOpts).toQuery().text;
-/* query_text :
-"SELECT `user`.`id`, `user`.`name`, `order`.`product_id`, `order`.`created_at` FROM `user` INNER JOIN `order` ON (`user`.`id` = `order`.`user_id`) WHERE (((`order`.`product_id` IN (?, ?)) AND (`user`.`created_at` > ?)) AND (`user`.`created_at` < ?)) GROUP BY `user`.`id` ORDER BY `order`.`id`, `order`.`product_id`",
- */
+//SELECT `user`.`id`, `user`.`name`, `order`.`product_id`, `order`.`created_at` FROM `user` INNER JOIN `order` ON (`user`.`id` = `order`.`user_id`) WHERE (((`order`.`product_id` IN (?, ?)) AND (`user`.`created_at` > ?)) AND (`user`.`created_at` < ?)) GROUP BY `user`.`id` ORDER BY `order`.`id`, `order`.`product_id` 
 
 //Joining three tables
 var joinOpts = {
