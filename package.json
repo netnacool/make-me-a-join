@@ -3,6 +3,7 @@
   "name": "make-me-a-join",
   "version": "1.0.0",
   "description": "join queries builder",
+  "keywords": ["sql","node-sql","join", "query", "query builder"],
   "repository": {
     "type": "git",
     "url": "git@github.com:netnacool/make-me-a-join.git"
