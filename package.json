@@ -1,7 +1,7 @@
 {
   "author": "Nakul Mohan <nakul.mohan4491@gmail.com>",
   "name": "make-me-a-join",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "join queries builder",
   "keywords": ["sql","node-sql","join", "query", "query builder"],
   "repository": {
